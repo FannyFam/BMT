@@ -1,0 +1,107 @@
+<!-- Quiz -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Added -->
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+    <!-- <link href="styles.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- <title></title> -->
+  </head>   
+  <body class="sb-nav-fixed" onload="onload=start()">
+  <!-- Execute js immediately once page is loaded. sb-nav-fixed fixed the nav bar -->
+  
+  <!-- Site Nav -->
+    <div class="container">
+      <div class="nav">
+        <h1 class="nav-heading"></h1>
+          <nav class="nav nav-masthead justify-content-left">
+            <!-- <a class="nav-link active" id="quiznav" href="index.html">Home</a>
+            <a class="nav-link" id="quiznav" href="med_glossary.html">Glossary</a> -->
+            <!-- Trigger the modal -->
+            <a class="nav-link" id="quiznav" href="#" data-toggle="modal" data-target="#contact">Contacts</a>
+          </nav>
+      </div>
+    </div>
+    
+  <!-- Staff Contacts-->
+  <!-- Modal -->
+    <div class="container">
+      <div id="contact" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">Contacts</h4>
+            </div>
+            <div class="modal-body">
+              <p>Should you encounter any issue during the quiz, please contact Ms. Angela at (65) 1234 5678</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="intr py-3 text-primary text-center">
+        <h2 class="text-primary display-3 my-4">Basic Medical Terminology Quiz</h2>
+      </div>
+    </div> 
+
+      <!-- id = quiz -->
+    <div class="container">
+        <div class="row bg-light text-dark py-3 my-2">
+          <div class="col-5">
+            <h2 class=py-3>Questions..</h2>
+            <div id="quiz" class="form"></div>
+          </div>
+        </div>
+    </div>
+    
+    <!-- id = submit -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-primary" id="submit">Submit</button>
+        <!-- </div>     -->
+        <!-- <div class="col"> -->
+          <button type="button" class="btn btn-success" id="finish" disabled>Return to Home</button>
+        </div>
+      </div>                    
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-light mt-auto">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between small">
+          <div class="text-muted">Copyright &copy; FamH Website 2020</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <!-- Added -->
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+    <script src="./js/datatables-demo.js"></script>
+    <script src="./js/quiz.js"></script>
+
+  </body>
+</html>
+

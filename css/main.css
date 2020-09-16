@@ -1,0 +1,107 @@
+/* 
+Change to better background
+Should not be fancy colors for health */
+.cover
+ {
+    background: url("../img/coverpage1.jpg") no-repeat center fixed;     
+    /* automatically scale the width and height of a responsive background image to be the same or bigger than the viewport*/
+    background-size:cover;
+  }
+
+  .nav-link:hover{
+  color:#1affff;
+  }
+
+.quiz{
+background: primary
+padding: 10px 0 10px 0;
+margin: 10px;
+color: white;
+text-align: center;
+}
+
+#covernav:hover{
+    /* font-weight: bolder; */
+    color:#1affff;
+    }
+  
+#glonav:hover, #loginnav:hover, #quiznav:hover{
+    color:#0000ff;
+}
+
+.jumbotron {
+    background:none;
+    /* .jumbotron {
+        text-align: center;
+        background: url(imgs/los-angeles-skyline.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        border-radius: 0;
+      } */
+   }
+
+/* Staff Contacts Popup */
+.modal-content{
+  background-color:#F0F0F0;
+    /* background:#cce5ff; */
+    color:#385a7f;
+}
+
+/* Staff Contacts Popup */
+.modal-body p{
+    color: black;
+    font-family: sans-serif
+}
+
+/* med_glossary */
+.card-header{
+background:#cce5ff;
+color:#385a7f;
+font-weight: bold;
+}
+
+/* Glossary */
+#dataTable th{
+    background-color:	#F5F5F5;
+    }
+
+.form-group{
+    font-size: 15px;
+    }
+
+/* Candidate details */
+#instrtext{
+    font-size: 13px;
+}
+    
+
+h1{
+    color:whitesmoke;
+}
+
+h3{
+    color:#385a7f;
+    padding: 20px 0 10px 0;
+}
+h6{
+font-size: 13px;;
+font-style: italic;
+font-family:'Trebuchet MS';
+color: mediumvioletred;
+}
+
+p{
+    color:whitesmoke;
+    padding: 20px 0 20px 0;
+}
+
+/* .radio{
+    font-weight: bold;
+    background-color: black;
+} */
+
+.test-Learn{
+    color: white;
+}
+

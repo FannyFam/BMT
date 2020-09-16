@@ -1,0 +1,160 @@
+<!-- Candidate details -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Added -->
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+    <!-- <link href="styles.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <title></title>
+  </head>
+
+  <body class="login"> 
+    
+    <!-- Site Nav
+    <div class="nav">
+      <h1 class="nav-heading"></h1>
+      <nav class="nav nav-masthead justify-content-left">
+        <a class="nav-link active" href="index.html">Home</a>
+      </nav>
+    </div>
+    
+    <!-- Site Nav -->
+    <div class="container">
+      <div class="nav">
+        <h1 class="nav-heading"></h1>
+          <nav class="nav nav-masthead justify-content-left">
+          <a class="nav-link active" id="loginnav" href="index.html">Home</a>
+          <a class="nav-link active" id="loginnav" href="med_glossary.html">Glossary</a>
+          <!-- Trigger the modal -->
+          <a class="nav-link" id="loginnav" href="#" data-toggle="modal" data-target="#contact">Contacts</a>
+          </nav>
+        </div>
+      </div>
+
+    <!-- Staff Contacts-->
+
+    <div class="container">
+      <h3 class="login-heading">Candidate details</h3>
+      <h6>All the fields are mandatory</h6>
+    </div>
+    
+    <!-- Modal -->
+    <div id="contact" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"></button>
+            <h4 class="modal-title">Contacts</h4>
+          </div>
+          <div class="modal-body">
+            <p>Should you encounter any issue during the quiz, please contact Ms. Angela at (65) 1234 5678</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Candidate details -->
+    <div class="container">
+      <form id="contact-form">
+
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="full-name" aria-describedby="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <div class="col-sm-9">
+            <input type="email" class="form-control" id="email">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="domain">Domain</label>
+          <div class="col-sm-9">
+            <select class="form-control" id="domain">
+              <option></option>
+              <option>HQ</option>
+              <option>Institution 1</option>
+              <option>Institution 2</option>
+              <option>Institution 3</option>
+              <option>HealthIT Grp</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="userid">User ID</label>
+          <div class="col-sm-9">
+          <input type="text" class="form-control" id="userid" aria-describedby="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="comment">Instructions</label>
+          <div class="col-sm-9">
+            <textarea class="form-control" rows="5" id="instrtext" disabled>
+            The quiz format is as follows:
+              Multiple choice
+              60 questions per quiz
+              45 marks required to pass (out of 60 available) - 75%
+              50 minutes duration
+              Closed book
+              There is only one correct answer per question
+              You are only required to make a single selection from the options available for each question.
+              
+              What to do Next?
+              Select [I have read the instructions] checkbox below
+              Select [Start Quiz] to proceed
+              Do not press [back] or [refresh] the page once the quiz is started
+              
+              Completing the Exam:
+              When you have completed the quiz, click [Submit] button.
+              
+              Result of the Quiz:
+              You may review your result before you end the quiz and return to home page.
+              [Green] Correct answer
+              [Red] Wrong answer
+
+            </textarea>
+          </div>
+        </div>
+
+        <div class="form-group form-check">
+          <div class="col-sm-9">
+          <input type="checkbox" class="form-check-input" id="instr">
+          <!-- #myModal change to id of the modal -->
+          <label class="form-check-label" for="instr">I have read the instructions</label>  
+          </div>           
+        </div>  
+
+        <button type="submit" class="btn btn-warning">Start Quiz</button>
+      </form>    
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>    
+    <script src="./js/login.js"></script>
+
+  </body>
+</html>
