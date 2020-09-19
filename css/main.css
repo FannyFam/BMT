@@ -12,6 +12,22 @@ Should not be fancy colors for health */
   color:#1affff;
   }
 
+.btn.btn-outline-info.btn-rounded{
+   
+    color: white;
+    min-width: 120px;
+    padding: 10px 10px;
+    border-radius: 22px;
+    /* background-color:none;
+    border: red
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer; */
+  }
+
+
 .quiz{
 background: primary
 padding: 10px 0 10px 0;
@@ -47,6 +63,8 @@ text-align: center;
     /* background:#cce5ff; */
     color:#385a7f;
 }
+
+
 
 /* Staff Contacts Popup */
 .modal-body p{

@@ -6,10 +6,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
     <!-- Added -->
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
@@ -20,30 +18,17 @@
   </head>
 
   <body class="login"> 
-    
-    <!-- Site Nav
-    <div class="nav">
-      <h1 class="nav-heading"></h1>
-      <nav class="nav nav-masthead justify-content-left">
-        <a class="nav-link active" href="index.html">Home</a>
-      </nav>
-    </div>
-    
     <!-- Site Nav -->
     <div class="container">
       <div class="nav">
-        <h1 class="nav-heading"></h1>
-          <nav class="nav nav-masthead justify-content-left">
-          <a class="nav-link active" id="loginnav" href="index.html">Home</a>
-          <a class="nav-link active" id="loginnav" href="med_glossary.html">Glossary</a>
+          <a class="nav-link" id="loginnav" href="index.html">Home</a>
+          <a class="nav-link" id="loginnav" href="med_glossary.html">Glossary</a>
           <!-- Trigger the modal -->
           <a class="nav-link" id="loginnav" href="#" data-toggle="modal" data-target="#contact">Contacts</a>
-          </nav>
         </div>
       </div>
 
     <!-- Staff Contacts-->
-
     <div class="container">
       <h3 class="login-heading">Candidate details</h3>
       <h6>All the fields are mandatory</h6>
@@ -82,7 +67,7 @@
         <div class="form-group">
           <label for="email">Email</label>
           <div class="col-sm-9">
-            <input type="email" class="form-control" id="email">
+            <input type="email" class="form-control" id="email" placeholder="name@example.com">
           </div>
         </div>
 
@@ -103,7 +88,7 @@
         <div class="form-group">
           <label for="userid">User ID</label>
           <div class="col-sm-9">
-          <input type="text" class="form-control" id="userid" aria-describedby="">
+          <input type="text" class="form-control" id="userid">
           </div>
         </div>
 
@@ -125,26 +110,26 @@
               Select [Start Quiz] to proceed
               Do not press [back] or [refresh] the page once the quiz is started
               
-              Completing the Exam:
+              Completing the Quiz:
               When you have completed the quiz, click [Submit] button.
               
               Result of the Quiz:
               You may review your result before you end the quiz and return to home page.
               [Green] Correct answer
               [Red] Wrong answer
-
             </textarea>
           </div>
         </div>
 
+        <!-- form checkbox -->
         <div class="form-group form-check">
           <div class="col-sm-9">
           <input type="checkbox" class="form-check-input" id="instr">
-          <!-- #myModal change to id of the modal -->
           <label class="form-check-label" for="instr">I have read the instructions</label>  
           </div>           
         </div>  
 
+        <!-- Start quiz button -->
         <button type="submit" class="btn btn-warning">Start Quiz</button>
       </form>    
     </div>

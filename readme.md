@@ -8,7 +8,7 @@ The solution should be ease of deploying to the clinicians and supporting staff.
 
 ## Approach
 
-Version : 0
+Version : 0.1
 Duration : 2 weeks
 
 1. Use case
@@ -67,20 +67,20 @@ Duration : 2 weeks
 Important : The design and solution should be user-friendly, ease of enhancement, avoid complexity to increase the adoption (including UI and image). 
 
 ### Specifications
-* Cover page : index.html [jumbotron]
+* Cover page : index.html [jumbotron, button]
 
 * Navigation [nav]
-    - Home
-    - Glossary, quick accessible from any page except quiz
-    - Support staff contacts : popup to assist the candidate from any page [modal]
+    - Home [nav-link]
+    - Glossary, quick accessible from any page except quiz [nav-link]
+    - Support staff contacts : popup to assist the candidate from any page [nav-link,modal]
 
 * Self-defined style : main.css.
 
 * Glossary : med_glossary.html, med_glossary.js
     - [Glossary] and [Learn More] have the same content in this version
     - Ease of updating / replacing the content (store in js instead of html)
-    - Load the content from js to browser. 
     - Ease of search due to large volume of data will be loaded subequently
+    - Load the table/content from js to browser [dataTable, Table.insertRow]
 
 * Candidate details : login.html, login.js
     - Capture the basic information of health IT : Name, email, domain (identity of institution/company/agency) and ID for subsequent enhancement/authentication) [form]

@@ -702,28 +702,45 @@ let medGlossary = [
 	}
 ];
 
-// look through the Array
-// each item is inserted into each row
-function loadGlossary(tableName){
-	const table = document.getElementById(tableName);
+
+//Look through the Array
+//Each item is inserted into each row
+
+function loadGlossary(dataTableBody){
+	
+
+
+	const table = document.getElementById(dataTableBody);
+	// console.log(table)
+	//Find a <table> element with id="dataTableBody". from med_loadGlossary
+
 	medGlossary.forEach( item =>{
 		let row = table.insertRow();
-		// create new row
+		// console.log(row)
+		//Table insertRow() https://www.w3schools.com/jsref/met_table_insertrow.asp
+		//create arow in table
+		//Create an empty <tr> element and add it to the 1st position of the table:
 		
+		// set 1st column 'Term'
 		let term = row.insertCell(0);
-		// create column
-
+		// console.log(term)
+		// Insert new cells (<td> elements) at the 1st position of the "new" <tr> element
+		//<td class ='sorting_1">A-</td>
 		term.innerHTML = item.term;
-		// set 1st colum to be Term
-		
-		let definition = row.insertCell(1);
-		definition.innerHTML = item.definition;	
-		// set 2nd column to be definition
+		// console.log(term.innerHTML)
+		// Add some text to the new cells
 
+		// set 2nd column 'definition'
+		let definition = row.insertCell(1);
+		// Insert new cells (<td> elements) at 2nd position of the "new" <tr> element:
+		definition.innerHTML = item.definition;	
+		// Add some text to the new cells
+		
+		// set 3rd column 'grouping'
 		let grouping = row.insertCell(2);
+		// Insert new cells (<td> elements) at 3rd position of the "new" <tr> element:
 		grouping.innerHTML = item.grouping;	
-		// set 3rd column to be grouping
+		// Add some text to the new cells		
 
 	});
 }
-

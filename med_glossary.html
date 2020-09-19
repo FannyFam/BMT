@@ -4,10 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
     <!-- Added -->
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
@@ -17,26 +15,20 @@
     <title></title>
    
   </head>
-  <!-- Load the table - loadGlossary() in med_glossary.js, parameter from tbody id="dataTableBody" -->
-  <!-- class="sb-nav-fixed" -->
-  
-  <body class="sb-nav-fixed" onload="loadGlossary('dataTableBody');">
-      
+  <!-- class="sb-nav-fixed" + onload (execute jas after page is loaded) -->
+  <!-- loadGlossary() in med_glossary.js, parameter from tbody id="dataTableBody" -->
+  <body class="sb-nav-fixed" onload="loadGlossary('dataTableBody')">
     <!-- Site Nav -->
     <div class="container">
-      <div class="nav">
-        <h1 class="nav-heading"></h1>
-          <nav class="nav nav-masthead justify-content-left">
+      <div class="nav">  
           <a class="nav-link active" id="glonav" href="index.html">Home</a>
           <a class="nav-link active" id="glonav" href="med_glossary.html">Glossary</a>
           <!-- Trigger the modal -->
           <a class="nav-link" id="glonav" href="#" data-toggle="modal" data-target="#contact">Contacts</a>
-          </nav>
         </div>
       </div>
 
-    <!-- Staff Contacts-->
-    <!-- Modal -->
+    <!-- Staff Contacts usng Modal-->
     <div id="contact" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <!-- Modal content-->
@@ -55,16 +47,13 @@
       </div>
     </div>
 
-  <!-- glossary -->
-  <!-- card from bootstrap -->
+  <!-- DataTables to generate the demo table-->
     <div class="container-fluid">
       <div class="card mb-4">
         <div class="card-header">
         Medical Prefixes, Suffixes, Combining Form and Abbreviations
         </div>
         <div class="card-body">
-
-          
             <table class="table table-bordered" id="dataTable" width="100%">
               <!-- Table Header -->
               <thead>
@@ -74,10 +63,8 @@
                   <th>Group</th>
                 </tr>
               </thead>
-
-              <!-- Retrieve the data from js. Ease to changing the content -->
+              <!-- Retrieve the data from js. Ease to change the content -->
               <tbody id="dataTableBody"></tbody>
-              
               <!-- Table Footer. If the page is too long, still can see the columb name -->
               <tfoot>
                 <tr>
@@ -86,9 +73,7 @@
                   <th>Group</th>
                 </tr>
               </tfoot>
-
             </table>
-
           </div>
         </div>
       </div>

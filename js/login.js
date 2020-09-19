@@ -2,11 +2,10 @@
 let contactForm = document.getElementById('contact-form')
 // console.log(contactForm)
 
-<!-- contactForm.onsubmit -->
-
+//attach eventlistener to submit tag
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault()
-
+//prevent the page from refresh 
     let fullname = document.getElementById('full-name').value
     let email = document.getElementById('email').value
     let domain = document.getElementById('domain').value
@@ -26,7 +25,7 @@ contactForm.addEventListener('submit', (e) => {
     }
 
     if (domain == "" || userid == "") {
-        alert("domain and user ID must not be empty")
+        alert("Domain and user ID must not be empty")
         return
     }
     

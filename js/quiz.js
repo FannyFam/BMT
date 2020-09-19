@@ -1,19 +1,6 @@
 // Quiz Question
-//allow changing based on color > 100%
-
-//no color - work
-
-// load question - Work
-
-// all question should be answer - assign id to each options  -> ignore
-
-// click button > identify which one not answer > 
-
-//Submit > Are you sure you wan to submit ? Ok  or Cancel > if OK > Count > show  popup (OK) > End (Home page). If Cancel
-
-
 // Replace below section at ease
-// Enhancement : categorise the questions for test
+
 	
 	//Prepare quiz questions
 	let myQuestions = [
@@ -209,7 +196,7 @@
 		},
 		// a19-q20
 		{
-			question: "The prefix 'de-'is means",
+			question: "The prefix 'de-' means",
 			answers: {
 				a: 'Break down',
 				b: 'Backward',
@@ -653,7 +640,6 @@
 			},
 			correctAnswer: 'c'
 		}
-
 	];
 
 // #################################################################################################
@@ -665,40 +651,51 @@ function start(){
 	let finishButton = document.getElementById('finish');
 
 	generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);	
-
-	// when user clicks submit, show results - change to submit and show popup 
+	
+	// when user clicks submit, show popup 
 	submitButton.onclick = function(){
 		showResults(myQuestions, quizContainer, resultsContainer);
 	}
+	// when user clicks finish button (Return to Home), 
 	finishButton.onclick = function(){
+		//get the current page address (URL) and to redirect the browser to a new page
 		window.location.href = "index.html";
 	}
+	
 }
-
+//GENERATE THE QUIZ
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 	showQuestions(questions, quizContainer)
 }
 
+// need a place to store the output and the answer choices
 function showQuestions(questions, quizContainer){
-	// need a place to store the output and the answer choices
+	
+	//STORE HTML OUTPUT
 	let output= [];
 	let answers;
+	//qno: question number
 	let qno = 1;
-	//question number
+	
 
-	// for each question...
+	// FOR EACH QUESTION
 	for(let i=0; i<questions.length; i++){
-		// 1 question 3 ans
-		//
-		// first reset the list of answers
+	
+		//STORE LIST OF POSSIBLE ANSWER
+		
+		//1 question 3 ans
+		//first reset the list of answers
 		answers = [];
 
-		// for each available answer to this question...??
-		//assign a,b,or c to 
-
+		//AND FOR EACH AVAILABLE ANSWERS (a,b,c)...
+		
+		//for(letter in questions[i].answers) == for(let x = 0; x< question[0].answers.length; x++)
+		
 		for(letter in questions[i].answers){
-
-			// ...add an html radio button
+		
+			//..add an HTML radio button , assign a,b,or c 
+			//push()adds new items to the end of an array, and returns the new length
+			
 			answers.push(
 			   '<label>'
 				+ '<input type="radio" class="radio" name="question'+i+'" value="'+letter+'">'
@@ -706,40 +703,41 @@ function showQuestions(questions, quizContainer){
 			+ '</label>'
 			+ '<br/>'
 			);
-
 		}
-		// add this question and its 3 possible answers to the output
+		// ADD QUESTION AND ITS 3 POSSIBLE ANSWER TO ITS OUTPUT
 		qno=i+1;
 		output.push(
 			'<div class="question"><label>' + qno + '. ' + questions[i].question + '</label></div>'
 			+ '<div class="answers">' + answers.join('') + '</div>'
 			+ '<br/>'
 		);
-	}
+		
+	}	
 
-	// finally combine our output list into one string of html and put it on the page
+	// COMBINE OUTPUT INTO 1 STRING OF HTML AND PUT THE PAGE
 	quizContainer.innerHTML = output.join('');
 }
 
+//SHOW RESULTS
 
 function showResults(questions, quizContainer, resultsContainer){
-	// gather answer containers from our quiz
+	
 	let response = confirm("Are you sure you want to submit?");
 	if (!response){
 		return;
 	}
-	
+
+	// gather answer containers from our quiz
 	let answerContainers = quizContainer.querySelectorAll('.answers');
 
 	// keep track of user's answers
 	let userAnswer = '';
 	let numCorrect = 0;
 	let numWrong = 0;
-
 	
 	// for each question...
 	for(let i=0; i<questions.length; i++){
-
+	
 		// find selected answer
 		userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
 		
@@ -748,26 +746,24 @@ function showResults(questions, quizContainer, resultsContainer){
 			// add to the number of correct answers
 			numCorrect++;
 
+			// color correct answer green
 			answerContainers[i].style.color = 'green';
 		}
 		else{
+			// color wrong answer red
 			numWrong++;
 			answerContainers[i].style.color = 'red';
 		}
 	}
 
-	// show number of correct answers out of total - Change to show no of question answered
-	// resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
-
+	//SHOW SCORE 
 	alert('Your score is' + ' ' + numCorrect + ' out of ' + questions.length);
 
-
-	// disable the submit button
+	//DISABLE SUBMIT BUTTON.. ENABLE SHOW BUTTON TO GO BACK TO HOME
 	document.getElementById("submit").disabled = true;
 	document.getElementById("finish").disabled = false;
-
+	// disable the submit button
 }
-
 
 
 
